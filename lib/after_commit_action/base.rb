@@ -28,9 +28,7 @@ module AfterCommitAction
   private
 
   def _execute_after_commit_hook
-    until @_execute_after_commit.blank?
-      @_execute_after_commit.shift.call
-    end
+    @_execute_after_commit.shift.call until @_execute_after_commit.blank?
   rescue
     if defined?(Exceptional)
       # Rails quietly swallows exceptions in after-commit actions; to avoid missing these
