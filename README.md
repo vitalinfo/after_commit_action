@@ -4,6 +4,12 @@ Use this module to defer actions to the after-commit hook. This is useful if you
 
 ## Usage
 
+Add the following to your Gemfile:
+```ruby
+gem 'after_commit_action', git: 'https://github.com/vitalinfo/after_commit_action.git'
+```
+
+Now you can use it in ActiveRecord model callbacks
 ```ruby
 after_create :my_hook
 def my_hook
