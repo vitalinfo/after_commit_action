@@ -6,12 +6,12 @@
 
 Gem::Specification.new do |s|
   s.name = "after_commit_action"
-  s.version = "1.0.1"
+  s.version = "1.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["BestVendor"]
-  s.date = "2016-01-13"
+  s.date = "2016-06-02"
   s.description = "Use this module to defer actions to the after-commit hook. This is useful if you want to trigger actions in after_create, after_destroy and after_update callbacks but want to execute them outside of the transaction (for example, to avoid deadlocks)."
   s.email = "magnus@bestvendor.com"
   s.extra_rdoc_files = [
@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
     "after_commit_action.gemspec",
     "circle.yml",
     "lib/after_commit_action.rb",
+    "lib/after_commit_action/base.rb",
     "spec/after_commit_action_spec.rb",
     "spec/config/database.yml",
     "spec/models/another_model.rb",

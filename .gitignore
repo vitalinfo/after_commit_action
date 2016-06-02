@@ -49,3 +49,5 @@ Gemfile.lock
 
 # For rubinius:
 #*.rbc
+
+.idea
